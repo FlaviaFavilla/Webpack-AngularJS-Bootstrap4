@@ -8,14 +8,11 @@ import './scss/main.scss';
 require('angular');
 require("jquery");
 var jQuery = window.$ = window.jQuery = require('jquery')
-
 require('popper.js').default;
-
 require('bootstrap');
 
 
+var app = angular.module('appJS', []);
 
-var app = angular.module('flavia', []);
-
-app.controller('flaviaMain', require('./controller/flaviaController').default )
-app.directive('cuccioliList', require('./directive/cuccioliList').default )
+app.controller('appMain', require('./controller/mainController').default )
+app.directive('utentiList', require('./directive/utentiList').default )
