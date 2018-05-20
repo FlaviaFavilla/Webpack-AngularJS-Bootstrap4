@@ -10,7 +10,7 @@ require("jquery");
 var jQuery = window.$ = window.jQuery = require('jquery')
 
 require('popper.js').default;
-require('tether').default;
+
 require('bootstrap');
 
 
@@ -19,5 +19,3 @@ var app = angular.module('flavia', []);
 
 app.controller('flaviaMain', require('./controller/flaviaController').default )
 app.directive('cuccioliList', require('./directive/cuccioliList').default )
-
-console.log(app)
