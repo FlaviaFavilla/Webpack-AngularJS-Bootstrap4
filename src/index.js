@@ -6,12 +6,18 @@ process.env.NODE_ENV === 'development' && require('./index.html')
 import './scss/main.scss';
 
 require('angular');
-require('bootstrap');
 require("jquery");
+var jQuery = window.$ = window.jQuery = require('jquery')
 
-angular.module('app', []);
+require('popper.js').default;
+require('tether').default;
+require('bootstrap');
 
 
 
-//  ------- TEST JS --------
-console.log('ok');
+var app = angular.module('flavia', []);
+
+app.controller('flaviaMain', require('./controller/flaviaController').default )
+app.directive('cuccioliList', require('./directive/cuccioliList').default )
+
+console.log(app)

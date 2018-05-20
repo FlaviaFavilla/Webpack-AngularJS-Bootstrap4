@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title>Webpack App</title>
   </head>
-  <body>
+  <body ng-app="flavia">
     <div class="container">
       <h1>WebPack-Angular JS</h1>
       <p>
       </p>
     </div>
+
+    <div ng-controller="flaviaMain" >
+
+        <h1> Il mio nome è la: {{nome}}</h1>
+
+        <cuccioli-list></cuccioli-list>
+
+        <h1>Dim</h1>
+        <cuccioli-list data="cuccioli" aggiunte="bestie" name="nome"></cuccioli-list>
+
+    </div>
+
   </body>
 </html>
